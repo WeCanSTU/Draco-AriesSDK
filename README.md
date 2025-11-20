@@ -1,4 +1,4 @@
-[中文]([https://gitee.com/WeCanSTU/Draco-AriesSDK/blob/master/](https://github.com/WeCanSTU/Draco-AriesSDK/blob/master/README_CN.md) / [English](https://github.com/WeCanSTU/Draco-AriesSDK/blob/master/README.md)
+[中文]](https://github.com/WeCanSTU/Draco-AriesSDK/blob/master/README_CN.md) / [English](https://github.com/WeCanSTU/Draco-AriesSDK/blob/master/README.md)
 
 # Draco-AriesSDK Porting Project
 
