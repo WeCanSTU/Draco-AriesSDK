@@ -1,0 +1,79 @@
+version: "4.1"
+name: CA51F005-App
+type: C51
+deviceName: null
+packDir: null
+srcDirs: []
+virtualFolder:
+  name: <virtual_root>
+  files: []
+  folders:
+    - name: Application
+      files: []
+      folders:
+        - name: User
+          files:
+            - path: User/main.c
+            - path: ../../Sdk/CA51F005/应用实例/I2C_Master_Slave/I2C_Master/source/system_clock.c
+            - path: ../../Sdk/CA51F005/应用实例/I2C_Master_Slave/I2C_Master/source/delay.c
+          folders: []
+    - name: Lib
+      files:
+        - path: User/STARTUP.A51
+      folders: []
+    - name: AriesSDK
+      files:
+        - path: ../../Sdk/AriesSDK/Keil-8051/AriesSDK-CDC.lib
+      folders: []
+    - name: Port
+      files:
+        - path: ../Port/user_i2c_drv.c
+      folders: []
+dependenceList: []
+outDir: output
+miscInfo:
+  uid: 58c72eb6f4092bfec2a4c235373b4067
+targets:
+  App:
+    cppPreprocessAttrs:
+      defineList:
+        - DEBUG
+      incList:
+        - C:/Keil_v5/C51/INC/Cast
+        - User
+        - ../../Sdk/AriesSDK
+        - ../../Sdk/CA51F005/应用实例/I2C_Master_Slave/I2C_Master
+        - ../../Sdk/CA51F005/应用实例/Flash_Data_Area_Access
+      libList: []
+    excludeList:
+      - <virtual_root>/AriesSDK/utils.c
+    toolchain: Keil_C51
+    toolchainConfigMap:
+      Keil_C51:
+        options:
+          version: 2
+          afterBuildTasks:
+            - name: hex2bin
+              abortAfterFailed: false
+              command: hex2bin.exe ${OutDir}/${ProjectName}.hex
+              disable: false
+          asm-compiler: {}
+          beforeBuildTasks: []
+          c/cpp-compiler:
+            misc-controls: LARGE OMF2 BROWSE INTVECTOR(0x2000)
+            optimization-level: level-8
+            optimization-type: SPEED
+          global:
+            ram-mode: LARGE
+            rom-mode: LARGE
+          linker:
+            misc-controls: CLASSES (XDATA (X:0x0-X:0xFFF), HDATA (X:0x0-X:0xFFF), CODE (C:0x2000-C:0xFDFF), CONST (C:0x2000-C:0xFDFF), ECODE (C:0x2000-C:0xFDFF), HCONST (C:0x2000-C:0xFDFF))
+            output-format: elf
+            remove-unused: true
+            use-RTX: None
+    uploadConfigMap:
+      Custom:
+        bin: ${ExecutableName}.bin
+        commandLine: tsc-cli flash ${ExecutableName}.bin
+        eraseChipCommand: ""
+    uploader: Custom
