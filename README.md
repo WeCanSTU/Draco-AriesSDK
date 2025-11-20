@@ -1,4 +1,4 @@
-[中文](https://gitee.com/WeCanSTU/Draco-AriesSDK/blob/master/README_CN.md) / [English](https://gitee.com/WeCanSTU/Draco-AriesSDK/blob/master/README.md)
+[中文]([https://gitee.com/WeCanSTU/Draco-AriesSDK/blob/master/](https://github.com/WeCanSTU/Draco-AriesSDK/blob/master/README_CN.md) / [English](https://github.com/WeCanSTU/Draco-AriesSDK/blob/master/README.md)
 
 # Draco-AriesSDK Porting Project
 
@@ -142,7 +142,7 @@ Click `Program Flash` (`F8`) in the EIDE controls to execute firmware download a
 
   - Device logs captured in real-time on Windows
 
-   ![win-log](https://gitee.com/WeCanSTU/Draco-AriesSDK/raw/master/resources/win-log.png)
+   ![win-log](https://github.com/WeCanSTU/Draco-AriesSDK/blob/master/resources/win-log.png)
 
 ## 6. Resources and Support
 
